@@ -34,6 +34,7 @@ function LoginForm() {
     },
     validationSchema: LoginSchema,
     onSubmit: (data) => {
+      localStorage.clear();
       dispatch(login(data));
       setTimeout(() => {
         window.location.href = '/';
